@@ -9,11 +9,10 @@ namespace LCModTest.Patches {
         [HarmonyPrefix]
         private static bool RotateShipDecorSelectionPrefix(Terminal __instance) {
 			// Show all unlockablesList
-			Terminal terminalInstance = Object.FindObjectOfType<Terminal>();
-			terminalInstance.ShipDecorSelection.Clear();
+            __instance.ShipDecorSelection.Clear();
 			for (int i = 0; i < StartOfRound.Instance.unlockablesList.unlockables.Count; i++) {
 				if (StartOfRound.Instance.unlockablesList.unlockables[i].shopSelectionNode != null && !StartOfRound.Instance.unlockablesList.unlockables[i].alwaysInStock) {
-					terminalInstance.ShipDecorSelection.Add(StartOfRound.Instance.unlockablesList.unlockables[i].shopSelectionNode);
+                    __instance.ShipDecorSelection.Add(StartOfRound.Instance.unlockablesList.unlockables[i].shopSelectionNode);
 				}
 			}
 
