@@ -91,3 +91,10 @@ public class ExampleTVPatch
 In this case we include the type of the class we're patching in the attribute
 before our `ExampleTVPatch` class,
 as our class will only patch the `TVScript` class.
+
+## Function
+
+- Show all unlockable decors in terminal.
+- Show more videos on TV
+  - Add new videos by adding .videobundle files in moreTvVides folder
+  - .videobundle files are created by Unity AssetBundle
